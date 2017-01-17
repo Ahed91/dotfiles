@@ -36,8 +36,6 @@ Scripts in the `/init` subdirectory will be executed. A whole bunch of things wi
 
 #### Ubuntu
 * APT packages and git-extras via the [init/20_ubuntu_apt.sh](init/20_ubuntu_apt.sh) script
-
-#### Both
 * Vim plugins via the [init/50_vim.sh](init/50_vim.sh) script
 
 ## Installation
@@ -48,25 +46,17 @@ TODO:
 
 _Tested in Ubuntu 16.04 LTS_
 
-### Heed this critically important warning before you install
-
-**If you're not me, please _do not_ install dotfiles directly from this repo!**
-
-Why? Because I often completely break this repo while updating. Which means that if I do that and you run the `dotfiles` command, your home directory will burst into flames, and you'll have to go buy a new computer. No, not really, but it will be very messy.
-
 ### Actual installation (for you)
 
-1. [Read my gently-worded note](#heed-this-critically-important-warning-before-you-install)
 1. Fork this repo
 1. Open a terminal/shell and do this:
 
 ```sh
 export github_user=YOUR_GITHUB_USER_NAME
-
 bash -c "$(curl -fsSL https://raw.github.com/$github_user/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
 ```
 
-Since you'll be using the [dotfiles][dotfiles] command on subsequent runs, you'll only have to export the `github_user` variable for the initial install.
+Since you'll be using the `dotfiles` command on subsequent runs, you'll only have to export the `github_user` variable for the initial install.
 
 There's a lot of stuff that requires admin access via `sudo`, so be warned that you might need to enter your password here or there.
 
@@ -80,27 +70,27 @@ bash -c "$(curl -fsSL https://bit.ly/2iZGlkV)" && source ~/.bashrc
 To keep things easy, the `~/.bashrc` and `~/.bash_profile` files are extremely simple, and should never need to be modified. Instead, add your aliases, functions, settings, etc into one of the files in the `source` subdirectory, or add a new file. They're all automatically sourced when a new shell is opened. Take a look, I have [a lot of aliases and functions](source). I even have a [fancy prompt](source/50_prompt.sh) that shows the current directory, time and current git/svn repo status.
 
 ## Scripts
-In addition to the aforementioned [dotfiles][dotfiles] script, there are a few other [bin scripts](bin). This includes [nave](https://github.com/isaacs/nave), which is a [git submodule](vendor).
+In addition to the aforementioned `dotfiles` script, there are a few other [bin scripts](bin).
 
 * [dotfiles][dotfiles] - (re)initialize dotfiles. It might ask for your password (for `sudo`).
 * [src](link/.bashrc#L8-18) - (re)source all files in `/source` directory
 * Look through the [bin](bin) subdirectory for a few more.
 
 ## Prompt
-TODO : Description
-TODO : user login info (user, root and ssh with last ssh session info)
-TODO : git repo status (staged, unstaged and untracked)
-TODO : timestamp
+* TODO : Description
+* TODO : user login info (user, root and ssh with last ssh session info)
+* TODO : git repo status (staged, unstaged and untracked)
+* TODO : timestamp
 
 ## TODO/dotfiles to check latter
-![junegunn/dotfiles](https://github.com/junegunn/dotfiles)
-![gf3/dotfiles](https://github.com/gf3/dotfiles)
+* <https://github.com/junegunn/dotfiles>
+* <https://github.com/gf3/dotfiles>
 
 
 ## Inspiration (Fork From)
-<https://github.com/cowboy/dotfiles>  
+<https://github.com/cowboy/dotfiles>
 (and 8+ years of accumulated Exp.)
 
 ## License
 Copyright (c) 2017 Ahed Eid
-Licensed under the MIT license.  
+Licensed under the MIT license.

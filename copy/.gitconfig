@@ -1,0 +1,30 @@
+[user]
+  name = Ahed Eid
+  email = Ahed91@users.noreply.github.com
+[core]
+  editor = /usr/bin/vi
+  autocrlf = input
+  quotepath = false
+  whitespace = trailing-space,space-before-tab,tab-in-indent,tabwidth=4
+  pager = diff-so-fancy | less --tabs=4 -RFX
+[apply]
+  whitespace = fix
+[alias]
+  br = branch
+  ci = commit
+  co = checkout
+  df = diff
+  g = grep -I
+  lg = log -p
+  st = status
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
+[color]
+  ui = auto
+[merge]
+  log = true
+[rerere]
+  enabled = 1
+[diff]
+  tool = vimdiff

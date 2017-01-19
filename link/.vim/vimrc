@@ -613,9 +613,6 @@ endif
 " CPP
 autocmd FileType cpp nnoremap <F9> :w <bar> exec '!g++ -std=c++11 '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 
-
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -699,11 +696,6 @@ call plug#begin('~/.vim/plugged')
 " TODO check these plugin
 " Plug 'tpope/vim-sensible'
 " Plug 'tpope/vim-vinegar'
-" Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'pangloss/vim-javascript', {'for': 'javascript'}
-" Plug 'mustache/vim-mustache-handlebars'
-" Plug 'chase/vim-ansible-yaml'
-" Plug 'wavded/vim-stylus'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'bling/vim-airline'
@@ -743,7 +735,6 @@ Plug 'Shougo/unite-outline'
 Plug 'Shougo/neomru.vim'
 Plug 'sjl/gundo.vim', {'on': 'GundoToggle'}
 Plug 'mileszs/ack.vim', {'on': 'Ack'}
-Plug 'blindFS/vim-taskwarrior'
 Plug 'avdgaag/vim-phoenix', {'for': 'elixir'}
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}
 "Plug 'Shougo/vimproc.vim', {'do' : 'make'} " TODO Check if necessary
@@ -769,6 +760,7 @@ if has('nvim')
   Plug 'bfredl/nvim-miniyank'
 else
   if (hostname()=='palestine')
+    Plug 'blindFS/vim-taskwarrior'
     Plug '~/.vim/bundle_bak/YouCompleteMe' " I have an old copy and it works fine
   endif
   Plug 'vim-scripts/YankRing.vim'
@@ -783,7 +775,7 @@ call plug#end()
   let g:airline#extensions#tabline#buffer_nr_show = 1
   "let g:airline#extensions#tabline#fnamecollapse = 0
   "let g:airline#extensions#tabline#fnamemod = ':t'
-  let g:airline_theme='ravenpower'
+  let g:airline_theme='raven'
 
 " Indent Guides
   let g:indent_guides_start_level = 2
